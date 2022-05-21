@@ -5,7 +5,7 @@
 Para incorporarmos uma paginação em nossa aplicação, necessitamos de algumas configurações.
 
 > listagem de item por página `views.py` 
-```
+```py
 @main.route('/', methods=['GET', 'POST'])
 def index():
     ...
@@ -25,7 +25,7 @@ def index():
 > O valor de retorno de [paginate( )](https://flask-sqlalchemy.palletsprojects.com/en/2.x/api/?highlight=paginate#flask_sqlalchemy.BaseQuery.paginate) é um objeto da classe [Pagination](https://flask-sqlalchemy.palletsprojects.com/en/2.x/api/?highlight=paginate#flask_sqlalchemy.Pagination), uma classe definida por FlaskSQLAlchemy. Este objeto contém várias propriedades que são úteis para gerar páginas
 links em um modelo, então ele é passado para o modelo como um argumento, para a `_macros.hmtl`.
 
-```
+```py
 {% macro pagination_widget(pagination, endpoint) %}
 
   <ul class="pagination">
@@ -62,7 +62,7 @@ links em um modelo, então ele é passado para o modelo como um argumento, para 
 ```
 >Agora podemos incluir a macro *hmtl* de paginação para a listagem de produtos em `.../index.html`
 
-```
+```py
 {% import "_macros.html" as macros %}
 ...
 {% include '_posts.html' %}
