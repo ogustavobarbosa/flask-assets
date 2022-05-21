@@ -1,6 +1,8 @@
 # FLASK: widget de paginação
 
-### Incorporando widget de paginação, no Flask.
+### Incorporando widget de paginação, no Flask com FlaskAlchemy.
+
+Para incorporarmos uma paginação em nossa aplicação, necessitamos de algumas configurações.
 
 > listagem de item por página `views.py` 
 ```
